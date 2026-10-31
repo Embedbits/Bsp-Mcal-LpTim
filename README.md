@@ -13,7 +13,9 @@ This README is the landing page and the **specification of the interface** (mast
 own README with everything that is specific to the family: the instances of the device, their settings and the status of
 the implementation.
 
-> **Status: design.** No implementation exists yet, the interface below is a proposal. Stories and branches follow.
+> **Status: STM32H5 implemented** (branch `Dev/STM32H5`). Unit tests (Unity + CMock + RegMem) run on all 12
+> STM32H5 lines, integration tests are compiled for the target but not run on hardware (no board access in this
+> environment). The other families are still a proposal, their stories and branches follow.
 
 ---
 
@@ -84,7 +86,7 @@ master.
 
 | Family | Branch | Instances | Status |
 |---|---|---|---|
-| STM32H5 | `Dev/STM32H5` | `LPTIM1` ... `LPTIM6` (STM32H503: `LPTIM1`; STM32H523 / H533 / H543 / H553: `LPTIM1`, `LPTIM2`). Two channels, encoder mode, input capture and DMA requests on `LPTIM1` - `LPTIM3`, `LPTIM5`, `LPTIM6`; `LPTIM4` has no channels, no encoder mode and no DMA | planned (first) |
+| STM32H5 | `Dev/STM32H5` | `LPTIM1`, `LPTIM2` on STM32H503 / H523 / H533 / H543 / H553; `LPTIM1` ... `LPTIM6` on STM32H562 and later. Two channels, encoder mode, input capture and DMA requests on `LPTIM1` - `LPTIM3`, `LPTIM5`, `LPTIM6`; `LPTIM4` has no channels, no encoder mode and no DMA | implemented |
 | STM32U5 | `Dev/STM32U5` | `LPTIM1` ... `LPTIM4` | planned |
 | STM32H7 | `Dev/STM32H7` | `LPTIM1` ... `LPTIM5` | planned |
 | STM32G4 | `Dev/STM32G4` | `LPTIM1` | planned |
